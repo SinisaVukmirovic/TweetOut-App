@@ -36,7 +36,7 @@ header {
     background-color: var(--secondary-clr);
     color: var(--text-clr);
     width: 90%;
-    max-width: 35rem;
+    max-width: 30rem;
     margin: 5rem auto;
     padding: 2rem 1rem;
     /* border-radius: 1rem; */
@@ -50,6 +50,7 @@ header {
         background-color: var(--primary-clr);
         width: 100%;
         resize: none;
+        margin: .5rem 0;
         padding: .5rem 1rem;
         color: inherit;
     }
