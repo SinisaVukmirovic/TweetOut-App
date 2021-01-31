@@ -1,2 +1,32 @@
 @import './reset.css';
 @import './blocks.css';
+
+
+:root {
+    /* COLORS */
+    --theme-clr: #1da1f2;
+    --bg-clr: #15202b;
+    --primary-clr: #192734;
+    --secondary-clr: #202e3a;
+    --text-clr: #ddd;
+    --darker-text-clr: #aaa;    
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    background-color: var(--bg-clr);
+    color: var(--theme-clr);
+    font-family: sans-serif;
+
+    display: flex;
+    flex-direction: column; 
+}
+
+@media only screen and (min-width: 769px) {
+    html {
+        font-size: 16px;
+    }
+}

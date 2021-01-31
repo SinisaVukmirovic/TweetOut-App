@@ -1,13 +1,9 @@
-body {
-    background-color: #222;
-    color: #ddd;
-}
-
 header {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #ddd;
+    background-color: var(--secondary-clr);
+    padding: 1rem;
 
     position: relative;
 }
@@ -20,7 +16,7 @@ header {
     header #appInfo {
         width: 2rem;
         height: 2rem;
-        border: 2px solid #ddd;
+        border: 1px solid var(--theme-clr);
         border-radius: 50%;
         font-size: 1.5rem;
 
@@ -31,3 +27,30 @@ header {
         position: absolute;
         right: 5%;
     }
+
+.app {
+    background-color: var(--secondary-clr);
+    color: var(--text-clr);
+    width: 90%;
+    max-width: 35rem;
+    margin: 5rem auto;
+    padding: 1rem;
+    /* border-radius: 1rem; */
+}
+    .app h3 {
+        text-align: center;
+        color: var(--theme-clr);
+        font-weight: lighter;
+    }
+    .app #tweetTextArea {
+        background-color: var(--primary-clr);
+        width: 100%;
+        padding: .5rem 1rem;
+        color: inherit;
+    }
+        .app #tweetTextArea::placeholder {
+            color:var(--darker-text-clr);
+        }
+        .app #tweetTextArea:focus {
+            outline: 1px solid var(--theme-clr);
+        }
