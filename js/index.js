@@ -1,6 +1,6 @@
 const app = document.querySelector('.app');
 const tweetTextArea = app.querySelector('#tweetTextArea');
-const tweetBtn = app.querySelector('#tweetBtn');
+const tweetOutLink = app.querySelector('#tweetOutLink');
 const appInfoBtn = document.querySelector('#appInfoBtn');
 const maxChars = 140;  
 
@@ -17,14 +17,14 @@ const charsRemaining = () => {
     if (charsRemaining <= 0) {
         counter.innerText = `Characters left: ${charsRemaining} / ${maxChars}`;
         tweetTextArea.blur();
-        tweetBtn.disabled = true;
+        tweetOutLink.disabled = true;
     } else if (charsRemaining <= 20) {
         counter.style.color = 'red';
         counter.innerText = `Characters left: ${charsRemaining} / ${maxChars}`;
     } else {
         counter.style.color = 'var(--theme-clr)';
         counter.innerText = `Characters left: ${charsRemaining} / ${maxChars}`;
-        tweetBtn.disabled = false;
+        tweetOutLink.disabled = false;
     }
 };
 
@@ -38,4 +38,4 @@ const tweetOut = () => {
 
 appInfoBtn.addEventListener('click', showInfo);
 tweetTextArea.addEventListener('input', charsRemaining);
-tweetBtn.addEventListener('click', tweetOut);
+tweetOutLink.addEventListener('click', tweetOut);

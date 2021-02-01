@@ -21,7 +21,6 @@ header {
         height: 2rem;
         border: 2px solid var(--theme-clr);
         border-radius: 50%;
-        /* outline: none; */
         background-color: var(--primary-clr);
         color: var(--theme-clr);
         font-size: 1.75rem;
@@ -65,12 +64,11 @@ header {
     max-width: 30rem;
     margin: 5rem auto;
     padding: 2rem 1rem;
-    /* border-radius: 1rem; */
 }
     .app h2 {
         text-align: center;
-        color: var(--theme-clr);
-        font-weight: lighter;
+        color: var(--text-clr);
+        font-weight: bold;
     }
     .app #tweetTextArea {
         background-color: var(--primary-clr);
@@ -96,6 +94,15 @@ header {
 .app #tweetOutLink {
     margin: 3rem auto 0;
     position: relative;
+
+    border: 1px solid var(--theme-clr);
+    /* outline: none; */
+    background-color: var(--bg-clr);
+    color: var(--theme-clr);
+    font-size: 1.5rem;
+    margin-top: 2rem auto;
+    padding: .5rem 2rem;
+    cursor: pointer;
 }
     .app #tweetOutLink img {
         position: absolute;
@@ -104,8 +111,14 @@ header {
         width: 3rem;
         height: auto;
     }
+    .app #tweetOutLink:hover {
+        background-color: var(--primary-clr);
+    }
+    .app #tweetOutLink:disabled {
+        cursor: not-allowed;
+    }
 
-.app #tweetBtn {
+/* .app #tweetBtn {
     border: 1px solid var(--theme-clr);
     outline: none;
     background-color: var(--bg-clr);
@@ -120,4 +133,4 @@ header {
     }
     .app #tweetBtn:disabled {
         cursor: not-allowed;
-    }
+    } */
