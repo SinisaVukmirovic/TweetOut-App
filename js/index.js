@@ -1,7 +1,14 @@
 const app = document.querySelector('.app');
 const tweetTextArea = app.querySelector('#tweetTextArea');
 const tweetBtn = app.querySelector('#tweetBtn');
-const maxChars = 140;   
+const appInfoBtn = document.querySelector('#appInfoBtn');
+const maxChars = 140;  
+
+const showInfo = () => {
+    const appInfoElem = document.querySelector('#appInfo');
+
+    appInfoElem.classList.toggle('show');
+};
 
 const charsRemaining = () => {
     const charsRemaining = maxChars - tweetTextArea.value.length;
@@ -29,5 +36,6 @@ const tweetOut = () => {
     tweetOutLink.setAttribute('href', `${tweeterUrl}${typedTweet}`);
 };
 
+appInfoBtn.addEventListener('click', showInfo);
 tweetTextArea.addEventListener('input', charsRemaining);
 tweetBtn.addEventListener('click', tweetOut);

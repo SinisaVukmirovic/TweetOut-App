@@ -16,12 +16,13 @@ header {
         font-weight: bold;
         color: var(--text-clr);
     }
-    header #appInfo {
+    header #appInfoBtn {
         width: 2rem;
         height: 2rem;
         border: 2px solid var(--theme-clr);
         border-radius: 50%;
-        background-color: inherit;
+        /* outline: none; */
+        background-color: var(--primary-clr);
         color: var(--theme-clr);
         font-size: 1.75rem;
         font-family: serif;
@@ -35,6 +36,25 @@ header {
         position: absolute;
         right: 5%;
     }
+        header #appInfoBtn:hover {
+            background-color: inherit;
+        }
+
+    header #appInfo {
+        position: absolute;
+
+        width: 90%;
+        max-width: 25rem;
+        padding: 1rem;
+        background-color: var(--theme-clr);
+        color: var(--primary-clr);
+
+        transform: translateY(-8rem);
+        transition: transform 500ms ease-out;
+    }
+        header #appInfo.show {
+            transform: translateY(8rem);
+        }
 
 .app {
     display: flex;
