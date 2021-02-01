@@ -42,9 +42,12 @@ header {
     header #appInfo {
         position: absolute;
 
-        width: 90%;
+        outline: 2px solid var(--primary-clr);
+        outline-offset: -.5rem;
+        text-align: center;
+        width: 95%;
         max-width: 25rem;
-        padding: 1rem;
+        padding: 1rem 1.5rem;
         background-color: var(--theme-clr);
         color: var(--primary-clr);
 
@@ -124,11 +127,10 @@ header {
 
 @keyframes tweetOutAnim {
     to {
-        transform: translateX(500%) translateY(-500%);
+        transform: translateX(750%) translateY(-750%) scale(2);
         opacity: 0;
     }
 }
-
 
 /* .app #tweetBtn {
     border: 1px solid var(--theme-clr);
