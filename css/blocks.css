@@ -99,7 +99,6 @@ header {
     position: relative;
 
     border: 1px solid var(--theme-clr);
-    /* outline: none; */
     background-color: var(--bg-clr);
     color: var(--theme-clr);
     font-size: 1.5rem;
@@ -122,7 +121,7 @@ header {
     }
 
 .app #tweetOutLink img.tweetOutAnim {
-    animation: tweetOutAnim 2s ease-in-out forwards;
+    animation: tweetOutAnim 1500ms ease-in-out forwards;
 }
 
 @keyframes tweetOutAnim {
@@ -131,20 +130,3 @@ header {
         opacity: 0;
     }
 }
-
-/* .app #tweetBtn {
-    border: 1px solid var(--theme-clr);
-    outline: none;
-    background-color: var(--bg-clr);
-    color: var(--theme-clr);
-    font-size: 1.5rem;
-    margin-top: 2rem auto;
-    padding: .5rem 2rem;
-    cursor: pointer;
-}   
-    .app #tweetBtn:hover {
-        background-color: var(--primary-clr);
-    }
-    .app #tweetBtn:disabled {
-        cursor: not-allowed;
-    } */

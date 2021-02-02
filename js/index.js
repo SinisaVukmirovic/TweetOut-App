@@ -33,10 +33,14 @@ const tweetOut = () => {
     const tweetOutLink = app.querySelector('#tweetOutLink');
     const tweeterUrl = 'https://twitter.com/intent/tweet?text=';
 
-    tweetOutLink.setAttribute('href', `${tweeterUrl}${typedTweet}`);
+    // tweetOutLink.setAttribute('href', `${tweeterUrl}${typedTweet}`);
 
     const tweetImgAnim = tweetOutLink.querySelector('img');
     tweetImgAnim.classList.add('tweetOutAnim');
+
+    tweetImgAnim.addEventListener('animationend', () => {
+        location.href = `${tweeterUrl}${typedTweet}`;
+    });
 };
 
 appInfoBtn.addEventListener('click', showInfo);
