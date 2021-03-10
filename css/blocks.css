@@ -80,6 +80,7 @@ header {
         margin: .5rem 0;
         padding: .5rem 1rem;
         color: inherit;
+        caret-color: var(--theme-clr);
     }
         .app #tweetTextArea::placeholder {
             color:var(--darker-text-clr);
